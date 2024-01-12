@@ -1,0 +1,1436 @@
+@font-face {
+    font-family: kamran;
+    src: url(GT-America);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+html,body{
+    width: 100vw;
+    height: 100vh;
+    background-color: #f1f1f1
+}
+html{
+    overflow-x: hidden;
+}
+
+html::-webkit-scrollbar{
+    display: none;
+}
+
+/* *::selection{
+    background-color: #123;
+    color: #1e1e2fe8;
+} */
+
+#overlay{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: #222;
+    z-index: 999;
+    transition:"0.9s ease";
+}
+
+#overlay h1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 2.3vw;
+    font-family: voyage;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    -webkit-text-stroke: #f1f1f1;
+    -webkit-text-stroke-width: 1px;
+}
+
+#page1{
+    width: 100vw;
+    height: 100vh;
+    background-color: #f1f1f1;
+}
+
+#page1 h1{   
+    position: relative;
+    font-family: voyage;
+    left: -100%;
+    top: 6vh;
+    width: 15vw;
+    font-size: 4vw;
+    font-weight: 400;
+    letter-spacing: 2px;
+    text-transform: capitalize; 
+    color: #1E1E2F;
+    letter-spacing: 5px;
+    /* background-color: #97C680; */
+}
+
+#nav-prt1{
+    position: relative;
+    width: 100vw;
+    gap: 5vw;
+    padding: 10px;
+    display: flex;
+    text-transform: uppercase;
+    bottom: 0.4vh;
+    cursor: pointer;
+    color: #1E1E2F; 
+    left: -100%; 
+    /* background-color: #fff; */
+}
+
+#nav-prt1 h5{
+    position: relative;
+    left: 25%;
+    font-size: 1vw;
+    font-weight: 400;
+    transition: all 0.7s ease;
+}
+#nav-prt1 h5::after{
+    content: "";
+    height: 50%;
+    width: 0%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.64);
+    position: absolute;
+    left: 0;
+    top: 10px;
+    transition: 500ms ease-out;
+}
+
+#nav-prt1 h5:hover::after{
+    width: 100%;
+    transition: 500ms ease-out;
+}
+
+#nav-prt2{
+    position: relative;
+    width: 20vw;
+    gap: 5vw;
+    padding: 10px;
+    display: flex;
+    text-transform: uppercase;
+    bottom: 6vh;
+    right: -100%;
+    cursor: pointer;
+    color: #1E1E2F;
+}
+#nav-prt2 h5{
+    position: relative;
+    font-size: 1vw;
+    font-weight: 400;
+    transition: all 0.7s ease;
+}
+#nav-prt2 h5:nth-child(2){
+    background-color: #97C680;
+    padding: 1px 20px;
+    border-radius: 20px;
+}
+#nav-prt2 h5:nth-child(2):hover{
+    background-color: #FEBA88;
+}
+#nav-prt2 h5::after{
+    content: "";
+    height: 50%;
+    width: 0%;
+    border-bottom: 1px solid #1E1E2F;
+    position: absolute;
+    left: 0;
+    top: 10px;
+    transition: 500ms ease-out;
+}
+
+#nav-prt2 h5:hover::after{
+    width: 100%;
+    transition: 500ms ease-out;
+}
+
+.txt{
+    position: relative;
+    left: -52.5vw;
+    font-size: 4vw;
+    top: 8vh;
+    width: 25vw;
+    height: 50vh;
+    text-transform: capitalize;
+    text-align: center;
+}
+
+.txt h2{
+    /* font-family: kamran; */
+    font-weight: 400;
+    letter-spacing: 5px;
+    color: #1e1e2fe8;
+    line-height: 12vh;
+}
+
+#picture{
+    position: relative;
+    width: 69vw;
+    height: 78vh;
+    left: 100vw;
+    /* background-color: red; */
+    bottom: 53vh;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    gap: 30px;
+}
+
+#picture .card1{
+    /* overflow: hidden; */
+    position: relative;
+    width: 50%;
+    height: 100%;
+    /* background-color: orange; */
+    transition: 0.6s ease;
+    border-radius: 50%;  
+}
+#picture .card1 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.6s ease;
+    overflow: hidden;
+}
+#picture .card1 h3{
+    position: absolute;
+    top: 40%;
+    left: -5%;
+    rotate: -90deg;
+    color: #f1f1f1;
+    font-size: 3vw;
+    font-weight: 450;
+    text-transform: capitalize;
+    transition: 0.5s ease;
+    opacity: 1;
+}
+#picture .card1 h4{
+    position: absolute;
+    top: 40%;
+    left: 60%;
+    rotate: -90deg;
+    color: #f1f1f1;
+    font-size: 1.5vw;
+    font-weight: 550;
+    text-transform: capitalize;
+    transition: 0.5s ease;
+    opacity: 0;
+}
+
+#picture .card2{
+    position: relative;
+    width: 30%;
+    height: 100%;
+    /* background-color: salmon; */
+    transition: 0.6s ease;
+}
+#picture .card2 img{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.6s ease; 
+}
+#picture .card2 h3{
+    position: absolute;
+    top: 40%;
+    left: -5%;
+    rotate: -90deg;
+    color: #f1f1f1;
+    font-size: 3vw;
+    font-weight: 450;
+    text-transform: capitalize;
+    transition: 0.5s ease;
+    opacity: 1;
+}
+#picture .card2 h4{
+    position: absolute;
+    top: 40%;
+    left: 60%;
+    rotate: -90deg;
+    color: #f1f1f1;
+    font-size: 1.5vw;
+    font-weight: 550;
+    text-transform: capitalize;
+    transition: 0.5s ease;
+    opacity: 0;
+}
+#picture .card3{
+    position: relative;
+    width: 30%;
+    height: 100%;
+    /* background-color: slateblue; */
+    transition: 0.6s ease;
+}
+#picture .card3 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.6s ease;
+}
+#picture .card3 h3{
+    position: absolute;
+    top: 40%;
+    left: -5%;
+    rotate: -90deg;
+    color: #f1f1f1;
+    font-size: 3vw;
+    font-weight: 450;
+    text-transform: capitalize;
+    transition: 0.5s ease;
+    opacity: 1;
+}
+#picture .card3 h4{
+    position: absolute;
+    top: 40%;
+    left: 60%;
+    rotate: -90deg;
+    color: #f1f1f1;
+    font-size: 1.5vw;
+    font-weight: 550;
+    text-transform: capitalize;
+    transition: 0.5s ease;
+    opacity: 0;
+}
+
+#inp input{
+    position: absolute;
+    top: 82vh;
+    left: 10vw;
+    width: 20vw;
+    height: 10vh;
+    padding: 20px 50px;
+    text-transform: capitalize;
+    font-size: 1.2vw;
+    border: none;
+    opacity: 1;
+    white-space: 2px;
+    /* cursor: pointer; */
+    font-family: kamran;
+    filter: drop-shadow(1px 2px 10px bottom);
+}
+.green{
+    position: absolute;
+    width: 5vw;
+    height: 10vh;
+    background-color: #97C680;
+    top: 82vh;
+    left: 25vw;
+    transition:  0.5s ease;
+}
+.green h6{
+    text-align: center;
+    justify-content: center;
+    text-transform: uppercase;
+    font-size: 1.5vw;
+    font-weight: 400;
+    color: #f1f1f1;
+    margin-top: 28%;
+    cursor: pointer;
+}
+.green:hover{
+    width: 5vw;
+    background-color:#FEBA88;
+    color: black;
+}
+
+#page2{
+    width: 100%;
+    height: 100vh;
+    background-color: #f1f1f1;
+    /* font-family: voyage; */
+}
+
+#page2 h1{
+    position: relative;
+    text-align: center;
+    font-family: kamran;
+    top: 10vh;
+    color: #1E1E2F;
+    word-spacing: .4vw;
+    font-size: 4vw;
+    /* transition: 0.1s ease; */
+    opacity: 0;
+}
+
+#page2 .nav-prt3{
+    position: relative;
+    display: flex;
+    top: 100vh;
+    justify-content: center;
+    white-space: nowrap;
+    align-items: center;
+    margin-top: 16vh;
+    gap: 3vw;
+    padding: 5px 10px;
+    opacity: 0;
+}
+
+#page2 .nav-prt3 h5{
+    font-family: kamran;
+    text-transform: capitalize;
+    font-size: 1.2vw;
+    font-weight: 600;
+    color: #1E1E2F;
+    padding: 5px 10px;
+    transition: 0.6s ease;
+}
+
+#page2 .nav-prt3 h5:hover{
+    background-color:#222222e7;
+    color: #f1f1f1;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+#addition{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    /* background-color: brown; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#addition .pat-1{
+    position: absolute;
+    left: -100%;
+    opacity: 0;
+    width: 35%;
+    height: 60%;
+    background-color: #f1f1f1;
+    border-radius: 10%;
+    z-index: 999;
+    transition: 0.9s ease;
+    box-shadow: 1px 2px 100px;
+}
+#addition .pat-1 img{
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10%;
+}
+#addition .ri-close-line{
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    font-size: 2vw;
+}
+#addition h5{
+    position: relative;
+    width: 8vw;
+    top: 4.5vh;
+    left: 3vw;
+    text-transform: capitalize;
+    font-family: kamran;
+    font-size: 1.3vw;
+    color: #1E1E2F;
+}
+#addition p{
+    position: relative;
+    width: 12.5vw;
+    top: -5vh;
+    left: 18vw;
+    text-transform: capitalize;
+    /* font-family: kamran; */
+    font-size: 1vw;
+    color: #1E1E2F;
+}
+#addition input{
+    position: relative;
+    width: 80%;
+    padding: 20px 50px;
+    left: 3vw;
+    text-transform: capitalize;
+    font-family: kamran;
+    border: none;
+    font-size: 1.1vw;
+}
+#addition button{
+    position: relative;
+    background-color: #97C680;
+    right: 1vw;
+    top: 0.5vh;
+    padding: 5px;
+    border-radius: 5%;
+    border: none;   
+}
+.pat-1 .ri-arrow-right-s-line{
+    font-size: 2vw;
+}
+/*fourth page ka hia */
+.pat-2 {
+    position: absolute;
+    right: -120%;
+    opacity: 0;
+    width: 35%;
+    height: 60%;
+    background-color: #f1f1f1;
+    border-radius: 10%;
+    z-index: 999;
+    transition: 0.9s ease;
+    box-shadow: 1px 2px 100px;
+}
+.pat-2 img{
+    width: 100%;
+    height: 50%;
+    object-fit: cover;
+    border-radius: 10%;
+}
+.pat-2 .ri-close-line{
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    font-size: 2vw;
+}
+.pat-2 h5{
+    position: relative;
+    width: 8vw;
+    top: 4.5vh;
+    left: 3vw;
+    text-transform: capitalize;
+    font-family: kamran;
+    font-size: 1.3vw;
+    color: #1E1E2F;
+}
+.pat-2 p{
+    position: relative;
+    width: 12.5vw;
+    top: -5vh;
+    left: 18vw;
+    text-transform: capitalize;
+    /* font-family: kamran; */
+    font-size: 1vw;
+    color: #1E1E2F;
+}
+.pat-2 input{
+    position: relative;
+    width: 80%;
+    padding: 20px 50px;
+    left: 3vw;
+    text-transform: capitalize;
+    font-family: kamran;
+    border: none;
+    font-size: 1.1vw;
+}
+.pat-2 button{
+    position: relative;
+    background-color: #97C680;
+    right: 1vw;
+    top: 0.5vh;
+    padding: 5px;
+    border-radius: 5%;
+    border: none;   
+}
+.pat-2 .ri-arrow-right-s-line{
+    font-size: 2vw;
+}
+
+/*first page ka hia */
+.pat-3{
+    position: absolute;
+    left: -100%;
+    opacity: 1;
+    width: 35%;
+    height: 60%;
+    background-color: #f1f1f1;
+    border-radius: 10%;
+    z-index: 999;
+    transition: 0.9s ease;
+    box-shadow: 1px 2px 100px;
+}
+.pat-3 img{
+    width: 100%;
+    height: 50%;
+    object-fit: cover;
+    border-radius: 10%;
+}
+.pat-3 .ri-close-line{
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    font-size: 2vw;
+}
+.pat-3 h5{
+    position: relative;
+    width: 8vw;
+    top: 4.5vh;
+    left: 3vw;
+    text-transform: capitalize;
+    font-family: kamran;
+    font-size: 1.3vw;
+    color: #1E1E2F;
+}
+.pat-3 p{
+    position: relative;
+    width: 12.5vw;
+    top: -5vh;
+    left: 18vw;
+    text-transform: capitalize;
+    /* font-family: kamran; */
+    font-size: 1vw;
+    color: #1E1E2F;
+}
+.pat-3 input{
+    position: relative;
+    width: 80%;
+    padding: 20px 50px;
+    left: 3vw;
+    text-transform: capitalize;
+    font-family: kamran;
+    border: none;
+    font-size: 1.1vw;
+}
+.pat-3 button{
+    position: relative;
+    background-color: #97C680;
+    right: 1vw;
+    top: 0.5vh;
+    padding: 5px;
+    border-radius: 5%;
+    border: none;   
+}
+.pat-3 .ri-arrow-right-s-line{
+    font-size: 2vw;
+}
+/*third page ka hia */
+.pat-4{
+    position: absolute;
+    right: -140%;
+    opacity: 0;
+    width: 35%;
+    height: 60%;
+    background-color: #f1f1f1;
+    border-radius: 10%;
+    z-index: 999;
+    transition: 0.9s ease;
+    box-shadow: 1px 2px 100px;
+}
+.pat-4  img{
+    width: 100%;
+    height: 50%;
+    object-fit: cover;
+    border-radius: 10%;
+}
+.pat-4  .ri-close-line{
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    font-size: 2vw;
+}
+.pat-4  h5{
+    position: relative;
+    width: 8vw;
+    top: 4.5vh;
+    left: 3vw;
+    text-transform: capitalize;
+    font-family: kamran;
+    font-size: 1.3vw;
+    color: #1E1E2F;
+}
+.pat-4  p{
+    position: relative;
+    width: 12.5vw;
+    top: -5vh;
+    left: 18vw;
+    text-transform: capitalize;
+    /* font-family: kamran; */
+    font-size: 1vw;
+    color: #1E1E2F;
+}
+.pat-4  input{
+    position: relative;
+    width: 80%;
+    padding: 20px 50px;
+    left: 3vw;
+    text-transform: capitalize;
+    font-family: kamran;
+    border: none;
+    font-size: 1.1vw;
+}
+.pat-4  button{
+    position: relative;
+    background-color: #97C680;
+    padding: 5px 5px;
+    right: 1vw;
+    top: 0.5vh;
+    padding: 5px;
+    border-radius: 5%;
+    border: none;   
+}
+.pat-4 .ri-arrow-right-s-line{
+    font-size: 2vw;
+}
+/*cards hai div hai*/
+#page2 #cards{
+    position: relative;
+    top: 9vh;
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    white-space: nowrap;
+    align-items: center;
+    /* background-color: #FEBA88; */
+    gap: 3vw;
+    opacity: 0;
+}
+
+#page2 #card1{
+    position: relative;
+    width: 20%;
+    height: 100%;
+}
+#card1 .one{   
+    width: 95%;
+    height: 80%;
+    background-image: url(https://assets.website-files.com/617fa48948c7ab24b715140e/617fa5505ecb8e2f5f217405_categories_01.webp);
+    background-position: center;
+    background-size: cover;
+    border-radius: 10%;
+    position: relative;
+    top: 8%;
+    left: 2.5%;
+    transition: 0.6 ease;
+}
+#card1 h6{
+    position: relative;
+    bottom: -5px;
+    text-align: center;
+    font-size: 1vw;
+    font-family: kamran;
+    text-transform: capitalize;
+    color: #1e1e2fd2;
+}    
+
+#card1 h4{
+    margin-top: 6vh;
+    position: relative;
+    text-align: center;
+    font-family: kamran;
+    text-transform: capitalize;
+    font-size: 1.2vw;
+    transition: 0.3s ease;
+}
+
+#card1 h4:hover{
+    color: #97C680;
+}
+
+#page2 #card2{
+    position: relative;
+    width: 20%;
+    height: 100%;
+}
+#card2 .two{   
+    position: relative;
+    top: 7%;
+    left: 4%;
+    width: 92%;
+    height: 80%;
+    background-image: url(https://assets.website-files.com/617fa48948c7ab24b715140e/617fa550a239182daefe2e21_categories_02.webp);
+    background-position: center;
+    background-size: cover;
+    border-radius: 10%;
+}
+#card2 h6{
+    position: relative;
+    bottom: -5px;
+    text-align: center;
+    font-size: 1vw;
+    font-family: kamran;
+    text-transform: capitalize;
+    color: #1e1e2fd2;
+}
+
+#card2 h4{
+    margin-top: 4.9vh;
+    position: relative;
+    text-align: center;
+    font-family: kamran;
+    text-transform: capitalize;
+    font-size: 1.2vw;
+    transition: 0.3s ease;
+}
+
+#card2 h4:hover{
+    color: #97C680;
+}
+
+#page2 #card3{
+    overflow: hidden;
+    position: relative;
+    width: 20%;
+    height: 100%;
+}
+#card3 .three{   
+    position: relative;
+    top: 2%;
+    left: 5%;
+    margin-bottom: 3vh;
+    width: 90%;
+    height: 90%;
+    background-image: url(https://assets.website-files.com/617fa48948c7ab24b715140e/617fa550c4055a4a51c6d4ff_categories_03.webp);
+    background-position: center;
+    background-size: cover;
+    border-radius: 10%;
+}
+#card3 h6{
+    position: relative;
+    bottom: -4px;
+    text-align: center;
+    font-size: 1vw;
+    font-family: kamran;
+    text-transform: capitalize;
+    color: #1e1e2fd2;
+}
+#card3 h4{
+    bottom: 3vh;
+    position: relative;
+    text-align: center;
+    font-family: kamran;
+    text-transform: capitalize;
+    font-size: 1.2vw;
+    transition: 0.3s ease;
+}
+
+#card3 h4:hover{
+    color: #97C680;
+}
+#page2 #card4{
+    position: relative;
+    width: 20%;
+    height: 100%;
+}
+#card4 .four{   
+    position: relative;
+    top: 8%;
+    left: 2.5%;
+    width: 95%;
+    height: 70%;
+    background-image: url(https://assets.website-files.com/617fa48948c7ab24b715140e/617fa550a23918491cfe2e20_categories_04-p-500.webp);
+    background-position: center;
+    background-size: cover;
+    border-radius: 10%;
+}
+#card4 h6{
+    position: relative;
+    bottom: -4px;
+    text-align: center;
+    font-size: 1vw;
+    font-family: kamran;
+    text-transform: capitalize;
+    color: #1e1e2fd2;
+}
+#card4 h4{
+    margin-top: 6vh;
+    position: relative;
+    text-align: center;
+    font-family: kamran;
+    text-transform: capitalize;
+    font-size: 1.2vw;
+    transition: 0.3s ease;
+}
+
+#card4 h4:hover{
+    color: #97C680;
+}
+
+#page3{
+    width: 100vw;
+    height: 100vh;
+    background-color: #f1f1f1;
+}
+
+#page3 .text h1{
+    position: relative;
+    top: 3vh;
+    left: -100vw;
+    text-transform: capitalize;
+    /* font-family: kamran; */
+    width: 30vw;
+    font-size: 2.5vw;
+    font-weight: 550;
+    text-align: left;
+    color: #1E1E2F;
+}
+#page3 .text h3{
+    position: relative;
+    top: -17vh;
+    right: -100vw;
+    /* text-transform: capitalize; */
+    font-weight: 400;
+    font-size: 1.4vw;
+    text-align: center;
+    width: 35vw;
+    color: #1E1E2F;
+}
+
+.ui{
+    position: absolute;
+    right: -100vw;
+    top: 18vh;
+    width: 25vw;
+    background-color: #97C680;
+    color: #1E1E2F;
+    /* z-index: 999; */
+    display: flex;
+    white-space: nowrap;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    text-transform: capitalize;
+    border-radius: 2%;
+    border-top-left-radius: 30%;
+    border-bottom-right-radius: 30%;
+    transition: 0.2s ease;
+}
+.ui:hover{
+    background-color: #FEBA88;
+    color: #fff;
+}
+.ui h4{
+    font-size: 1.5vw;
+    font-weight: 400;
+    font-family: kamran;
+    color: #1E1E2F;
+}
+.left img{
+    position: absolute;
+    height: 45vh;
+    left: 7vw;
+    top: 12vh;
+    /* opacity: 0.3; */
+}
+#page3 .elem{
+    position: relative;
+    top: -3vh;
+    width: 100vw;
+    height: 65vh;
+    display: flex;
+}
+
+#page3 .elem .left{
+    width: 35%;
+    height: 100%;
+}
+
+.left .one{
+    position: relative;
+    top: 11vh;
+    left: 13vw;
+    width: 20vw;
+    padding: 10px 60px;
+    text-transform: capitalize;
+    /* background-color:grey; */
+}
+.one h2{
+    font-family: kamran;
+    font-size: 1.8vw;
+    color: #1E1E2F;
+}
+.one h5{
+    font-family: kamran;
+    font-weight: 300;
+    font-size: 1vw;
+    margin-top: 1vh;
+    width: 15vw;
+    line-height: 2vh;
+}
+.left .two{
+    position: relative;
+    top: 17vh;
+    left: 13vw;
+    width: 20vw;
+    padding: 10px 60px;
+    text-transform: capitalize;
+    /* background-color:grey; */
+
+}
+.two h2{
+    font-family: kamran;
+    font-size: 1.8vw;
+    color: #1E1E2F;
+}
+.two h5{
+    font-family: kamran;
+    font-weight: 300;
+    font-size: 1vw;
+    margin-top: 1vh;
+    width: 15vw;
+    line-height: 2vh;
+
+}
+.left .three{
+    position: relative;
+    top: 23vh;
+    left: 13vw;
+    width: 20vw;
+    padding: 10px 60px;
+    text-transform: capitalize;
+    /* background-color:grey; */
+
+}
+.three h2{
+    font-family: kamran;
+    font-size: 1.8vw;
+    color: #1E1E2F;
+}
+.three h5{
+    font-family: kamran;
+    font-weight: 300;
+    font-size: 1vw;
+    margin-top: 1vh;
+    width: 15vw;
+    line-height: 2vh;
+
+}
+#page3 .elem .right{
+    width: 60%;
+    height: 100%;   
+}
+.right img{
+    position: relative;
+    width: 85%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50px;
+    margin-left: 4vw;
+    transition: 0.9s ease;
+}
+.right img:hover{
+    width: 95%;
+}
+#khan{
+    position: absolute;
+    width: 7.5%;
+    height: 15vh;
+    border-radius: 50%;
+    left: 30vw;
+    top: 8vh;
+}
+
+#page4{
+    width: 100vw;
+    height: 100vh;
+    background-color: #f1f1f1;
+    color: #1E1E2F;
+}
+
+#page4 h1{
+    position: relative;
+    text-align: center;
+    font-size: 3.5vw;
+    text-transform: capitalize;
+    top: 5vh;
+    color: #1E1E2F;
+    /* font-family: kamran; */
+    word-spacing: 0.1vw;
+    font-weight: 500;
+}
+
+#crd{
+    position: relative;
+    top: 28vh;
+    left: 200vw;
+    transform: translate(-50%,-50%);
+    width: 90vw;
+    height: 30vh;
+    white-space: nowrap;
+    padding: 0px 50px;
+    overflow-y: hidden;
+}
+#crd::-webkit-scrollbar{
+    display: none;
+}
+
+#crd .first{
+    overflow: hidden;
+    position: relative;
+    width: 20vw;
+    /* left: 2vw; */
+    height: 100%;
+    background-color: #dadada;
+    display: inline-block;
+    border-radius: 30px;
+    color: #1E1E2F;
+}
+.first p{
+    position: relative;
+    top: 5%;
+    left: 13%;
+    font-size: 1.2vw;
+    text-align: center;
+    width: 15vw;
+    font-family: kamran;
+}
+.first img{
+    position: relative;
+    left: 2.5vw;
+    top: 6.5vh;
+    height: 30%;
+    width: 20%;
+    border-radius: 50px;
+    object-fit: cover;
+}
+
+.first h5{
+    position: absolute;
+    bottom: 7vh;
+    text-transform: capitalize;
+    font-size: 1.2vw;
+    left: 8vw;
+}
+.first h6{
+    position: absolute;
+    bottom: 4vh;
+    text-transform: capitalize;
+    left: 8vw;
+    font-size: 1vw;
+    font-weight: 400;
+    transition: 0.6s ease;
+}
+.first h6:hover{
+    color: #97C680;
+}
+
+#crd .second{
+    overflow: hidden;
+    position: relative;
+    width: 20vw;
+    left: 1vw;
+    height: 100%;
+    background-color: #dadada;
+    display: inline-block;
+    border-radius: 30px;
+    color: #1E1E2F;
+}
+.second p{
+    position: relative;
+    top: 5%;
+    left: 13%;
+    /* padding: 5px; */
+    font-size: 1.2vw;
+    text-align: center;
+    width: 15vw;
+    font-family: kamran;
+}
+.second img{
+    position: relative;
+    left: 2.5vw;
+    top: 6.5vh;
+    height: 30%;
+    width: 20%;
+    border-radius: 50px;
+    object-fit: cover;
+}
+
+.second h5{
+    position: absolute;
+    bottom: 7vh;
+    text-transform: capitalize;
+    font-size: 1.2vw;
+    left: 8vw;
+}
+.second h6{
+    position: absolute;
+    bottom: 4vh;
+    text-transform: capitalize;
+    left: 8vw;
+    font-size: 1vw;
+    font-weight: 400;
+    transition: 0.6s ease;
+}
+.second h6:hover{
+    color: #97C680;
+}
+
+
+#crd .third{
+    overflow: hidden;
+    position: relative;
+    width: 20vw;
+    left: 2vw;
+    height: 100%;
+    background-color: #dadada;
+    display: inline-block;
+    border-radius: 30px;
+    color: #1E1E2F;
+}
+.third p{
+    position: relative;
+    top: 5%;
+    left: 13%;
+    font-size: 1.2vw;
+    text-align: center;
+    width: 15vw;
+    font-family: kamran;
+}
+.third img{
+    position: relative;
+    left: 2.5vw;
+    top: 6.5vh;
+    height: 30%;
+    width: 20%;
+    border-radius: 50px;
+    object-fit: cover;
+}
+
+.third h5{
+    position: absolute;
+    bottom: 7vh;
+    text-transform: capitalize;
+    font-size: 1.2vw;
+    left: 8vw;
+}
+.third h6{
+    position: absolute;
+    bottom: 4vh;
+    text-transform: capitalize;
+    left: 8vw;
+    font-size: 1vw;
+    font-weight: 400;
+    transition: 0.6s ease;
+}
+.third h6:hover{
+    color: #97C680;
+}
+
+#crd .fourth{
+    overflow: hidden;
+    position: relative;
+    width: 20vw;
+    left: 3vw;
+    height: 100%;
+    background-color: #dadada;
+    display: inline-block;
+    border-radius: 30px;
+    color: #1E1E2F;
+}
+.fourth p{
+    position: relative;
+    top: 5%;
+    left: 13%;
+    font-size: 1.2vw;
+    text-align: center;
+    width: 15vw;
+    font-family: kamran;
+}
+.fourth img{
+    position: relative;
+    left: 2.5vw;
+    top: 6.5vh;
+    height: 30%;
+    width: 20%;
+    border-radius: 50px;
+    object-fit: cover;
+}
+
+.fourth h5{
+    position: absolute;
+    bottom: 7vh;
+    text-transform: capitalize;
+    font-size: 1.2vw;
+    left: 8vw;
+}
+.fourth h6{
+    position: absolute;
+    bottom: 4vh;
+    text-transform: capitalize;
+    left: 8vw;
+    font-size: 1vw;
+    font-weight: 400;
+    transition: 0.6s ease;
+}
+.fourth h6:hover{
+    color: #97C680;
+}
+
+
+#crd .fivth{
+    overflow: hidden;
+    position: relative;
+    width: 20vw;
+    left: 4vw;
+    height: 100%;
+    background-color: #dadada;
+    display: inline-block;
+    border-radius: 30px;
+    color: #1E1E2F;
+}
+.fivth p{
+    position: relative;
+    top: 5%;
+    left: 13%;
+    font-size: 1.2vw;
+    text-align: center;
+    width: 15vw;
+    font-family: kamran;
+}
+.fivth img{
+    position: relative;
+    left: 2.5vw;
+    top: 6.5vh;
+    height: 30%;
+    width: 20%;
+    border-radius: 50px;
+    object-fit: cover;
+}
+
+.fivth h5{
+    position: absolute;
+    bottom: 7vh;
+    text-transform: capitalize;
+    font-size: 1.2vw;
+    left: 8vw;
+}
+.fivth h6{
+    position: absolute;
+    bottom: 4vh;
+    text-transform: capitalize;
+    left: 8vw;
+    font-size: 1vw;
+    font-weight: 400;
+    transform: 0.6s ease;
+}
+.fivth h6:hover{
+    color: #97C680;
+}
+
+
+#crd .sixth{
+    overflow: hidden;
+    position: relative;
+    width: 20vw;
+    left: 5vw;
+    height: 100%;
+    background-color: #dadada;
+    display: inline-block;
+    border-radius: 30px;
+    color: #1E1E2F;
+}
+.sixth p{
+    position: relative;
+    top: 5%;
+    left: 13%;
+    font-size: 1.2vw;
+    text-align: center;
+    width: 15vw;
+    font-family: kamran;
+}
+.sixth img{
+    position: relative;
+    left: 2.5vw;
+    top: 6.5vh;
+    height: 30%;
+    width: 20%;
+    border-radius: 50px;
+    object-fit: cover;
+}
+
+.sixth h5{
+    position: absolute;
+    bottom: 7vh;
+    text-transform: capitalize;
+    font-size: 1.2vw;
+    left: 8vw;
+}
+.sixth h6{
+    position: absolute;
+    bottom: 4vh;
+    text-transform: capitalize;
+    left: 8vw;
+    font-size: 1vw;
+    font-weight: 400;
+    transition: 0.6s ease;
+}
+.sixth h6:hover{
+    color: #97C680;
+}
+
+.lower{
+    position: relative;
+    top: 20vh;
+    left: 8vw;
+    gap: 5vw;
+    display: flex;
+}
+.lower h3{
+    position: relative;
+    top: 7vh;
+    left: 1vw;
+    font-size: 2.5vw;
+    font-weight: 500;
+    color: #1E1E2F;
+    text-transform: capitalize;
+}
+.so{
+    position: relative;
+    top: 20vh;
+    display: flex;
+    left: 32vw;
+    gap: 15vw;
+    font-size: 1.3vw;
+    font-weight: 500;
+    color: #1E1E2F;
+    line-height: 8vh; 
+    text-transform: capitalize;
+    text-align: center;
+    font-weight: 500;  
+    cursor: pointer;
+}
+.fia{
+    position: relative;
+    top: 3vw;
+    left: 76vw;
+    font-size: 1.5vw;
+    text-transform: uppercase;
+    color: #1E1E2F;
+}
+.fia input{
+    position: relative;
+    top: 3vh;
+    padding: 10px 50px;
+    border: none;
+    font-size: 0.9vw;
+    text-transform: capitalize;
+}
+.fia button{
+    position: relative;
+    top: 8vh;
+    left: -6.2%;
+    border-radius: 10px;
+    padding: 5px 15px;
+    text-transform: capitalize;
+    background-color: #97C680;
+    color: #fff;
+    border: none;
+    transition: 0.6s ease;
+    cursor: pointer;
+}
+.fia button:hover{
+    background-color: #FEBA88;
+    color: #fff;
+}
+.symbol{
+    position: relative;
+    top: 21%;
+    font-size: 1.5vw;
+    display: flex;
+    justify-content: space-evenly;
+    cursor: pointer;
+}
+hr{
+    position: relative;
+    top: 19vh;
+}
+@media(min-width:600){
+    #page1 #picture #one{
+        flex-direction: column;
+    }
+}
